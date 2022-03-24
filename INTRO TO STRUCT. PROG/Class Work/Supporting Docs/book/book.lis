@@ -1,0 +1,74 @@
+-------------------------------------------------------------------------
+    File:  book.dat   The file below is used with python program book.py
+           It should only contain data!!!!  DO NOT TYPE THESE LINES
+-------------------------------------------------------------------------
+BROWN    JAVA       3999
+DAVIS      PYTHON   5679
+EVANS     RUBY        4397         <==    File:  book.dat
+LAMB       SWIFT      3867
+-------------------------------------------------------------------------
+                             Python Program book.py
+                             
+#######################################################################
+# Book Royalties Report using file : book.dat
+# File:  book.py
+# This is an example of processing data from different sequential files
+#######################################################################
+
+bookfile = open( "book.dat", mode = 'r' )
+
+authors = []                # authors null list
+ta = 0                      # total author counter
+tb = 0                      # total books accumulator
+tr = 0.0                    # total royalties accumulator
+
+#print headers
+print("\n==============================================================")
+print("                             BOOK ROYALTIES")
+print("")
+print("     NAME            TITLE               SOLD            DUE")
+print("================================================================")
+for authors in bookfile:
+              authors = authors.split()
+              name = authors[0]
+              title = authors[1]
+              sold = int(authors[2])
+              if sold >= 4000:
+                            due = sold * 0.35
+              else:
+                            due = sold * 0.29
+              #endif
+              # accumulate and count
+              ta = ta + 1
+              tb = tb + sold
+              tr = tr + due
+              #output
+              #print(name,title,sold,due)
+              print( "%10s      %10s       %12i    %12.2f"   %  (name,title,sold,due))
+#end for
+bookfile.close()
+print("================================================================")
+print("  Total authors found   ==> ",ta)
+print("  Total books           ==> ",tb)
+print("  Total royalities      ==> $", round(tr,2))
+print("\n .... End of job!")
+bookfile.close()
+# end of main
+
+#Execution Run:
+>>> 
+RESTART: C:/Users/hondas/Documents/Python/book/book.py 
+
+================================================================
+                             BOOK ROYALTIES
+
+     NAME            TITLE               SOLD            DUE
+================================================================
+     BROWN            JAVA               3999         1159.71
+     DAVIS          PYTHON               5679         1987.65
+     EVANS            RUBY               4397         1538.95
+      LAMB           SWIFT               3867         1121.43
+================================================================
+  Total authors found   ==>  4
+  Total books           ==>  17942
+  Total royalities      ==> $ 5807.74

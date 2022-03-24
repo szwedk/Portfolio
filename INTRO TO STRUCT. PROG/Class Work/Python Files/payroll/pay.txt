@@ -1,0 +1,6 @@
+111 Aidan Altorelli 20.0 12.00 0.1
+222 Vaughn Doorley 0.5 13.00 0.07
+333 Brian Hagens 15.0 14.0 0.1
+444 Alan Flores 15.0 42.0 0.1
+555 John Mayo 20.0 40 0.4
+666 Kamil Szwed 150 48 0.08

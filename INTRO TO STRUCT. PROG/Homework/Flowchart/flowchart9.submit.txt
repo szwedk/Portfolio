@@ -1,0 +1,29 @@
+#=======================================
+#   File:       flowchart9.test
+#   Date:       October 22, 2021
+#   Name:       Kamil Szwed
+#=======================================
+
+#Start Program
+
+x = int(input("Input a value for 'x': "))
+y = int(input("Input a value for 'y': "))
+
+while not(x + y > 42):
+    x = x + 10
+    y = y + 3
+    print(x,y)
+#endwhile
+print("42")
+
+#eng program
+
+>>> 
+= RESTART: /Users/kamilszwed/Documents/SHU/CS-111-B Python Files/Homework/Flowchart/flowchart9.test.py
+Input a value for 'x': 5
+Input a value for 'y': 4
+15 7
+25 10
+35 13
+42
+>>> 

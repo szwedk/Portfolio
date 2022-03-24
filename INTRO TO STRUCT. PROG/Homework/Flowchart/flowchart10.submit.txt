@@ -1,0 +1,45 @@
+#============================================
+#	File:	Flowchart10.test
+#	Name	K. Szwed
+#	Date:	Oct. 23, 2021
+#============================================
+
+#Start Program
+
+N = int(input("Input a number ==> "))
+
+if not(N == -999):
+	max = N
+	min = N
+	N = int(input("Input a number ==> "))
+	while (N != -999):
+		if N > max:
+			max = N
+		else:
+			if N < min:
+				min = N
+			#end If
+		#end if
+		N = int(input("Input a number for N ==> "))
+	#end while
+else:
+	print("Null List, max, min")
+#end if
+print("Your Max is:", max,"Your Min is:", min)
+print("End of Job")
+		
+>>> 
+= RESTART: /Users/kamilszwed/Documents/SHU/CS-111-B Python Files/Homework/Flowchart/flowchart10.test.py
+Input a number ==> 34
+Input a number ==> 34
+Input a number for N ==> 23
+Input a number for N ==> 12
+Input a number for N ==> 123
+Input a number for N ==> 76
+Input a number for N ==> 456
+Input a number for N ==> 876
+Input a number for N ==> 34
+Input a number for N ==> -999
+Your Max is: 876 Your Min is: 12
+End of Job
+>>> 

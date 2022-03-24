@@ -1,0 +1,45 @@
+
+#=======================================
+#   File:       flowchart6.test
+#   Date:       October 22, 2021
+#   Name:       Kamil Szwed
+#=======================================
+
+#Start Program
+
+
+while True:
+    a = int(input("Input integer 'a' "))
+    b = int(input("Input another integer 'b' "))
+    if not(a==b):
+        if a > b:
+            print("A is Larger")
+        else:
+            print("A is not Larger")
+        #Endif
+    else:
+        print("The numbers are equal")
+    #Endif
+    ans = input("do again? (Y/N)")
+    print("value of ans is ", ans)
+    if (ans != 'Y'):
+        print("you said y")
+        break
+    #Endif
+#Endwhile
+
+print("end of job")
+#End Program
+
+
+
+>>> 
+= RESTART: /Users/kamilszwed/Documents/SHU/CS-111-B Python Files/Homework/Flowchart/flowchart6.test.py
+Input integer 'a' 2
+Input another integer 'b' 3
+A is not Larger
+do again? (Y/N)y
+value of ans is  y
+you said y
+end of job
+>>> this is the one we could not figure out
