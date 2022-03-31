@@ -126,7 +126,35 @@ class Node:
          return c
        else:
          return 0
-        
+
+   def getsum(self):
+       if self:
+         sum = self.item 
+         if self.left:
+              sum = sum + self.left.getsum()
+         if self.right:
+              sum = sum + self.right.getsum()  
+         return sum
+       else:
+         return 0
+
+   def height(self):
+       if self:
+           if self.left:
+               l = self.left.height()
+           else:
+               l = -1
+           if self.right:
+               r = self.right.height()
+           else:
+               r = -1
+           if l > r:
+               h = 1 + l
+           else:
+                h = 1 + r
+           return h
+       else:
+         return 0       
                 
 class BinaryTree:
      # ---------------Create an empty tree -------------
@@ -143,8 +171,7 @@ class BinaryTree:
         else:
             self.root = Node(data)
             return True
- #  ------------ Delete nodes ---------------------------                   
-              
+ #  ------------ Delete nodes ---------------------------                         
    def delete(self, data):
         if self.root  :
             return self.root.delete(data)
@@ -180,3 +207,19 @@ class BinaryTree:
         else:
             c = 0 
         print('Count is ', c);  
+ #  ------------ Sum nodes ---------------------------  
+   def get_sum(self):
+        print()
+        if self.root:
+            c = self.root.getsum()
+        else:
+            c = 0 
+        print('Sum is ', c);  
+ #  ------------ Height nodes ---------------------------  
+   def get_height(self):
+        print()
+        if self.root:
+            h = self.root.height()
+        else:
+            h = 0 
+        print('Height is ', h);  

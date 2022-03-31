@@ -75,20 +75,20 @@ def isPalindrome(L,R):
     # reverse to string 
     rev = ''.join(reversed(L))
     Nrev = rev[1:]#removes extra space in front of string 
-    print(Nrev)
-    print(R)
+#    print(Nrev)
+#    print(R)
     # Checking if both string are equal or not
     # Does not work
     flG = 0
     for i in range(len(Nrev)):
         if R[i]!= Nrev[i]:
             flG = 1
-            print('inside loop',R[i],Nrev[i])
+#            print('inside loop',R[i],Nrev[i])
             break
     if flG ==0:
         print('They are the same')
     else:
-        print('THey are different')
+        print('They are different')
 
 
 
@@ -143,7 +143,7 @@ L, R = OperationMessage(x)
 checkL = convertMessage(L,y)
 checkR = convertMessage(R,y)
 
-print(checkL,checkR)
+print(f'{x} translated to morse is {checkL}{checkR}')
 
 ans = isPalindrome(checkL, checkR)
 

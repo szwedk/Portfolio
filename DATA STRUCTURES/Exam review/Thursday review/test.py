@@ -1,16 +1,20 @@
+# Kamil Szwed
+# Practice
+# 
+
 class Node:
     def __init__(self,nm,rd):
-        self.name = nm
-        self.record = rd
-        self.ref = None
+        self.empName = nm
+        self.empRec = rd
+        self.next = None
 
 class LinkedList:
 
     def __init__(self):
         self.start_node = None
 
-    def print_list(self):
-        print('Name     Best Record')
+    def printL(self):
+        print('empName     Best empRec')
         print('---------------')
         if self.start_node is None:
             print('List is empty')
@@ -18,44 +22,46 @@ class LinkedList:
         else:
             n = self.start_node
             while n is not None:
-                print(n.name, n.record, sep = '\t')
-                n = n.ref
+                print(n.empName, n.empRec, sep = '\t')
+                n = n.next
             print(' ')
 
-    def insert(self,n,r):
+    def ins(self,n,r):
         new_node = Node(n,r)
-        new_node.ref = self.start_node
+        new_node.next = self.start_node
         self.start_node = new_node
 
-    def record_above_35(self):
-        print('Players with record > 35: ', end = '\n')
+    def abov35(self):
+        print('Players with empRec > 35: ', end = '\n')
         if self.start_node is None:
             print('List is empty')
             return
         else:
             n = self.start_node
             while n is not None:
-                if n.record > 35:
-                    print(n.name,n.record, sep = '\t')
-                n = n.ref
+                if n.empRec > 35:
+                    print(n.empName,n.empRec, sep = '\t')
+                n = n.next
         print(' ')
 
-    def highest_record(self):
-        print('Highest Record: ', end = '\n')
+    def hiEmpRec(self):
+        print('Highest empRec: ', end = '\n')
         if self.start_node is None:
             print('List is empty')
             return
         else:
-            max_record = 0
+            max_empRec = 0
             n = self.start_node
             while n != None:
-                if max_record < n.record:
-                    max_record = n.record
-                    max_name = n.name
-                n = n.ref
-            print(max_name, max_record, sep = '\t')
+                if max_empRec < n.empRec:
+                    max_empRec = n.empRec
+                    max_empName = n.empName
+                n = n.next
+            print(max_empName, max_empRec, sep = '\t')
 
-
+# Kamil Szwed
+# Practice
+# 
 
 My_List = LinkedList()
 
@@ -65,23 +71,23 @@ while choice != 5:
     print('What do you want to do?')
     print('1 = Add a new player')
     print('2 = Print all players')
-    print('3 = Print players with record above 35')
-    print('4 = Print player with highest record')
+    print('3 = Print players with empRec above 35')
+    print('4 = Print player with highest empRec')
     print('5 = Exit')
     print(' ')
     choice = int(input('Enter Choice: '))
     print(' ')
 
     if choice == 1:
-        name = input('Enter Name: ')
-        record = float(input('Enter Record: '))
-        My_List.insert(name,record)
+        empName = input('Enter empName: ')
+        empRec = float(input('Enter empRec: '))
+        My_List.ins(empName,empRec)
     elif choice == 2:
-        My_List.print_list()
+        My_List.printL()
     elif choice == 3:
-        My_List.record_above_35()
+        My_List.abov35()
     elif choice == 4:
-        m = My_List.highest_record()
+        m = My_List.hiEmpRec()
         
 
 print('\n Goodbye \n')

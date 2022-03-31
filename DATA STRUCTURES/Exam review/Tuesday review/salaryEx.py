@@ -1,4 +1,5 @@
-# 
+# Kamil Szwed
+# Practice
 # 
 # code that adds employes and salary to a list
 # prints the name and salary of current employees

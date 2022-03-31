@@ -5,14 +5,16 @@ from TreeModule import BinaryTree
 My_Tree = BinaryTree()
 
 choice = 0
-while choice != 6:
+while choice != 8:
     print("\n Binary Search Tree Demo, what do you want to do?")
     print(" 1 = Insert data ")
     print(" 2 = Traverse and print Tree inorder ")
     print(" 3 = Count number of nodes ")
     print(" 4 = Search for an item ")
     print(" 5 = Delete an item ")
-    print(" 6 = Exit")
+    print(" 6 = Get the sum of the numbers")
+    print(" 7 = Get the height")
+    print(" 8 = Exit")
     
     choice = int(input("\n Enter Choice: "))
 
@@ -37,7 +39,10 @@ while choice != 6:
         answer = My_Tree.delete(x)
         if answer== None:
             My_Tree.root = None
-         
+    elif choice==6:
+        My_Tree.get_sum()
+    elif choice==7:
+        My_Tree.get_height()         
           
     
       

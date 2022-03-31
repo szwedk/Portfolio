@@ -1,6 +1,10 @@
 #kamil szwed
 #salary question
 
+# Kamil Szwed
+# Practice
+# 
+
 salary = []
 names = []
 
